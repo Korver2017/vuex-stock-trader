@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from "vue-router";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {
   routes
 } from "./routes";
