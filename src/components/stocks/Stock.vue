@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <div class="panel panel-default">
+      <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">{{ stock.name }}
           <small>(Price: {{ stock.price }})</small>
