@@ -33,7 +33,7 @@
                 <li><a href="#">Load Data</a></li>
               </ul>
             </li>
-            <strong class="navbar-text">Funds: {{ funds }}</strong>
+            <strong class="navbar-text">Funds: {{ funds | currency }}</strong>
           </ul>
         </div>
       </div>
