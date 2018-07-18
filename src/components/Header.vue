@@ -1,13 +1,15 @@
 <template>
   <div>
     <nav class="navbar navbar-default">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <router-link
             to="/"
             class="navbar-brand">
             Stock Trader
           </router-link>
+        </div>
+        <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <router-link
               to="/portfolio"
@@ -22,8 +24,6 @@
               <a>Stocks</a>
             </router-link>
           </ul>
-        </div>
-        <div>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">End Day</a></li>
             <li class="dropdown">
@@ -33,6 +33,7 @@
                 <li><a href="#">Load Data</a></li>
               </ul>
             </li>
+            <strong class="navbar-text">Funds: {{ funds }}</strong>
           </ul>
         </div>
       </div>
@@ -41,7 +42,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    funds() {
+      return this.$store.getters.funds; 
+    }
+  },
+};
 </script>
 
 <style scoped>
