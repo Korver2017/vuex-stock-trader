@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from "vue-router";
+import VueResource from "vue-resource";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {
   routes
@@ -10,6 +11,9 @@ import {
 import store from "./store/store";
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
+
+Vue.http.options.root = 'https://vuex-stock-trader-c88bf.firebaseio.com/';
 
 Vue.filter('currency', (value) => {
   return '$' + value.toLocaleString();
